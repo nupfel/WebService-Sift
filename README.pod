@@ -1,0 +1,77 @@
+=pod
+
+=encoding UTF-8
+
+=head1 NAME
+
+WebService::Sift - WebService::Sift - an interface to siftscience.com's Events, Score and Label APIs using Web::API
+
+=head1 VERSION
+
+version 0.1
+
+=head1 SYNOPSIS
+
+Quick summary of what the module does.
+
+Perhaps a little code snippet.
+
+    use Some::Module;
+    use Data::Dump 'dump';
+
+=head1 SUBROUTINES/METHODS
+
+=head2 method
+
+=head1 INTERNALS
+
+=head2 BUILD
+
+basic configuration for the client API happens usually in the BUILD method when using Web::API
+
+=head1 BUGS
+
+Please report any bugs or feature requests on GitHub's issue tracker L<https://github.com/<github_user>/WebService::Sift/issues>.
+Pull requests welcome.
+
+=head1 SUPPORT
+
+You can find documentation for this module with the perldoc command.
+
+    perldoc WebService::Sift
+
+You can also look for information at:
+
+=over 4
+
+=item * GitHub repository
+
+L<https://github.com/<github_user>/WebService::Sift>
+
+=item * MetaCPAN
+
+L<https://metacpan.org/module/WebService::Sift>
+
+=item * AnnoCPAN: Annotated CPAN documentation
+
+L<http://annocpan.org/dist/WebService::Sift>
+
+=item * CPAN Ratings
+
+L<http://cpanratings.perl.org/d/WebService::Sift>
+
+=back
+
+=head1 AUTHOR
+
+Tobias Kirschstein <lev@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is Copyright (c) 2014 by Tobias Kirschstein.
+
+This is free software, licensed under:
+
+  The (three-clause) BSD License
+
+=cut
