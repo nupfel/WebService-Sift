@@ -11,16 +11,56 @@ with 'Web::API';
 
 =head1 SYNOPSIS
 
-Quick summary of what the module does.
+Please refer to the API documentation at L<https://siftscience.com/resources/references/events-api.html>
 
-Perhaps a little code snippet.
-
-    use Some::Module;
-    use Data::Dump 'dump';
+    use WebService::Sift;
+    
+    my $ws = WebService::Sift->new(api_key => 'XXX', debug => 1);
+    
+    # send a transaction event
+    my $response = $ws->transaction(
+        '$user_id'       => 'some@email.user',
+        '$currency_code' => 'USD',
+        '$amount'        => 500000,   # $50
+    );
+    
+    # get score for a user_id
+    # unfortunately due to some weird variable naming decisions at SiftScience
+    # the api_key has to be passed in here as well
+    $response = $ws->score(user_id => 'some@email.user', api_key => 'XXX');
+    
+    # label a user_id as fraud
+    $ws->label('$user_id' => 'some@email.user', '$is_bad' => 'true');
 
 =head1 SUBROUTINES/METHODS
 
-=head2 method
+=head2 create_order
+
+=head2 transaction
+
+=head2 create_account
+
+=head2 update_account
+
+=head2 add_item
+
+=head2 remove_item
+
+=head2 submit_review
+
+=head2 send_message
+
+=head2 login
+
+=head2 logout
+
+=head2 link_session_to_user
+
+=head2 custom
+
+=head2 score
+
+=head2 label
 
 =cut
 
@@ -136,7 +176,7 @@ sub BUILD {
 
 =head1 BUGS
 
-Please report any bugs or feature requests on GitHub's issue tracker L<https://github.com/<github_user>/WebService::Sift/issues>.
+Please report any bugs or feature requests on GitHub's issue tracker L<https://github.com/nupfel/WebService::Sift/issues>.
 Pull requests welcome.
 
 
@@ -153,7 +193,7 @@ You can also look for information at:
 
 =item * GitHub repository
 
-L<https://github.com/<github_user>/WebService::Sift>
+L<https://github.com/nupfel/WebService::Sift>
 
 =item * MetaCPAN
 
